@@ -17,21 +17,17 @@ html {
     'header'
     'main';
     margin: 0 auto;
-    background: #e9ecef;
+    background: #31333B;
 
 }
 
 header {
     grid-area: header;
     display: flex;
-    background: #20123a;
+    background: #34353A;
     color: #fff;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
-    box-shadow: 0px 10px 16px -3px rgba(94,94,94,1);
-}
-header .head-left {
-
 }
 header .head-middle, ul{
     display: flex;
@@ -39,6 +35,16 @@ header .head-middle, ul{
     width: 30rem;
     gap: 2rem;
     list-style-type:none;
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+}
+header .head-middle, li{
+    font-family: 'Montserrat';
+    color: #fff;
+}
+header .head-middle, li:hover{
+    color: #20123a;
+    cursor: pointer;
 }
 
 main {
@@ -52,16 +58,23 @@ main .banner {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #34353A;
+    box-shadow: .4rem 1.1rem 1.3rem 0rem rgba(22, 22, 22, 0.75);
 
 }
 main .banner .banner-left span{
-    font-size: 1.5rem;
-    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-family:  'Montserrat';
+    text-shadow: .7rem .7rem .7rem rgba(0,0,0,0.6);
 }
 
-main .banner .banner-left t{
-    color: #20123a;
-    font-size: 2.5rem;
+main .banner .banner-left span:nth-child(1){
+    color: #8160c0;
+    font-size: 5.5rem;
     font-family: 'Dancing Script';
 }
 main .banner .banner-middle {
@@ -75,23 +88,32 @@ main .banner .banner-right {
     flex-direction: column;
     gap: 2rem;
     padding-left: 1rem;
-    border-right: .2rem solid black;
+    border-right: .5rem solid #20123a;
     border-right-style:dotted;
     padding-right: .5rem;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+main .banner .banner-right a{
+    color: #fff;
+}
+main .banner .banner-right a:hover{
+    color: #20123a;
 }
 
 main .about {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
+    padding-top: 6rem;
     justify-content: center;
+    color: #fff;
 }
 main .about span:nth-child(1){
     font-size: 3rem;
-    border-bottom: .2rem solid black;
-    border-bottom-style: dashed;
     width: 15rem;
     margin-left: 5rem;
+    font-family:  'Playfair Display';
 }
 main .about span:nth-child(2){
     margin-top: 1rem;
@@ -105,14 +127,13 @@ main .skills{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color: #fff;
 }
 main .skills span:nth-child(1){
     font-size: 3rem;
-    border-bottom: .2rem solid black;
-    border-bottom-style: dashed;
     width: 27rem;
-    margin-left: 6rem;
-    align-self: flex-start;
+    font-weight: 500;
+    font-family:  'Playfair Display';
 }
 
 main .skills .skills-icons{
@@ -123,7 +144,7 @@ main .skills .skills-icons{
     width: 40rem;
 }
 main .skills .skills-icons .icon {
-    border: .1rem solid black;
+    border: .1rem solid #fff;
     width: 10rem;
     height: 10rem;
     border-radius: .4rem;
@@ -134,7 +155,14 @@ main .skills .skills-icons .icon {
     background: #20123a;
     color: #fff;
     font-weight: bold;
-    box-shadow: 0px 10px 16px -3px rgba(94,94,94,1);
+    box-shadow: 0rem 1rem 1.6rem -.3rem rgba(94,94,94,1);
+}
+main .skills .skills-icons .icon:hover {
+    background: #fff;
+    color: #20123a;
+    font-weight: bold;
+    box-shadow: 0rem 1rem 1.6rem -.3rem #20123a;
+    transition: .5s;
 }
 main .skills .skills-icons .icon:nth-child(7) span{
     text-align: center;
@@ -201,4 +229,12 @@ main .contact button{
     height: 2.5rem;
     margin-left: 1rem;
     margin-top: .5rem;
+    border-radius: .5rem;
+}
+main .contact button:hover{
+    background: #fff;
+    color: #20123a;
+    font-weight: bold;
+    box-shadow: 0px 10px 16px -3px #20123a;
+    transition: .5s;
 }
