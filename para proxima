@@ -1,0 +1,8 @@
+Framework: Flask
+Mapeamento objeto-relacional ORM: SQL Alchemy
+Numpy: Se caso precisar fazer manipulação de matriz, array ou vetores irão fazer usando a biblioteca Numpy
+Fazer um shell script
+
+
+COmandos basicos de python:
+Declarando a variavel
