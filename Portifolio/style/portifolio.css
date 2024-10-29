@@ -1,0 +1,88 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.feature .feature-bar {
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 2rem;
+    background: #2F3232;
+    border: .1rem solid #000;
+
+}
+.feature .feature-bar ul{
+    width: 38rem;
+
+}
+.feature .feature-bar li{
+    border: .1rem solid #fff;
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: .9rem;
+    background: #20123a;
+    font-weight: 600;
+    width: 13rem;
+}
+.feature .feature-bar li:hover{
+    background: #fff;
+    color: #20123a;
+}
+
+.feature .feature-box {
+    width: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature .feature-box .box{
+    border-radius: .5rem;
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feature .feature-box .box:nth-child(2), .box:nth-child(4), .box:nth-child(6){
+    margin-top: 2rem;
+}
+.feature .feature-box .box .feature-img{
+    border: .1rem solid purple;
+    border-radius: .5rem;
+    width: 15rem;
+    height: 15rem;
+    background:url(../img/depositphotos_479884626-stock-photo-books-table-library.webp);
+    background-size: cover;
+    background-position: center;
+}
+.feature .feature-box .box .box-desc{
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 18rem;
+}
+
+.feature .feature-box .box .box-desc span{
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+.feature .feature-box .box .box-desc button{
+    width: 5rem;
+    height: 1.5rem;
+    background: none;
+    border-radius: 1rem;
+    color: #fff;
+    border: .15rem solid #20123a;
+}
