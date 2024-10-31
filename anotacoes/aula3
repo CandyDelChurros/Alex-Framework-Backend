@@ -1,0 +1,32 @@
+30 de outubro
+Começamos instalando o flask no ambiente virtual
+
+Instalando Flask
+Para instalar o flask precisamos entrar no ambiente virtual execute 
+..venv/bin/activate
+após isto será necessario instalar o flask, nisso executaremos no ambiente virtual
+$ pip install flask
+Assim instalamos o flask
+
+A programação web é baseada em duas coisas sendo elas requisição e resposta, assim ao falar de aplicação web por parte do backend estamos falando de programação reativa, somente irá realizar se algo for pedido através do front, assim somente iniciando apenas logo após requisitados
+
+O flask permite que o codigo python receba a requisição e por sua vez gera seu resultado gerando como resposta.
+
+Explicando o route
+Definimos uma rota a partir do momento que escrevemos 
+@app.route('/')
+após executar tudo que tiver depois do / será a rota guiada, como exemplo:
+('/catalogo') : ele iniciará apartir do catalogo
+ao executar ele sozinho ele inicará apartir da raiz
+
+
+criar um html com a tag canvas que permite que o usuario transloque a imagem para direita e para esquerda deslocando com o teclado
+crie uma rota que permita o usuario capturar uma fotografia da webcam
+crie uma rota para pagina web que exiba uma tabela sem table com 997 linhas e cinco colunas
+1- id 2- nome 3- sobre 4-email 5- ações
+crie uma rota com 3 links
+1 para atividade 1
+1 para atividade 2
+1 para atividade 3
+crie 6 rotas sendo cada uma estilizada, sendo que cada rota deve conter o curriculo de um integrante do grupo
+
