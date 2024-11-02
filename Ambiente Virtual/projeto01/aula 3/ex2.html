@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Foto</title>
+    <style>
+        video, canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+        #message {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Captura de Foto com Webcam</h1>
+    <div id="message">Por favor, permita o acesso à sua câmera para tirar fotos.</div>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Tirar Foto</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <a id="download" style="display:none;">Baixar Foto</a>
+
+    <script>
+        // Obtendo os elementos do DOM
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const snapButton = document.getElementById('snap');
+const downloadLink = document.getElementById('download');
+
+// Função para iniciar a câmera
+function startCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(error => {
+            console.error("Erro ao acessar a webcam: ", error);
+            document.getElementById('message').innerText = "Erro ao acessar a câmera. Verifique as permissões.";
+        });
+}
+
+// Inicia a câmera
+startCamera();
+
+// Função para capturar a foto
+snapButton.addEventListener('click', () => {
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    // Cria um link para download
+    const dataUrl = canvas.toDataURL('image/png');
+    downloadLink.href = dataUrl;
+    downloadLink.download = 'foto.png';
+    downloadLink.style.display = 'block';
+    downloadLink.innerText = 'Baixar Foto';
+});
+/d
+    </script>
+</body>
+</html>

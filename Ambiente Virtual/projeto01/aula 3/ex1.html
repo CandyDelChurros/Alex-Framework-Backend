@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <link rel="stylesheet" href="ex1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="arena">
+            <div class="gol"></div>
+            <canvas id="ball" height="500" width="500"></canvas>
+            <div class="gol"></div>
+        </div>
+    </div>
+    <script>
+        const ball = document.getElementById("ball")
+        const dimensions = ball.getContext("2d")
+
+        let x = ball.width / 2
+        let y = ball.height /2
+        const radius = 20
+        const moveSpeed = 10
+
+        function drawBall() {
+            dimensions.clearRect(0,0, ball.width, ball.height)
+            dimensions.beginPath()
+            dimensions.arc (x,y, radius, 0, Math.PI*2)
+            dimensions.fillStyle = "yellow"
+            dimensions.fill()
+            dimensions.closePath()
+        }
+        function moveKey(event) {
+            switch (event.key) {
+                case "ArrowUp":
+                    y-= moveSpeed
+                break
+                case "ArrowDown":
+                    y+= moveSpeed
+                break
+                case "ArrowRight":
+                    x-= moveSpeed
+                break
+                case "ArrowLeft":
+                    x+=moveSpeed
+                break
+            }
+            drawBall()
+        }
+        document.addEventListener("keydown", moveKey)
+        drawBall()
+    </script>
+</body>
+</html>

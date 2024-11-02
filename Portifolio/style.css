@@ -1,0 +1,71 @@
+main {
+    display: grid;
+    grid-template-rows: 20rem 10rem 1fr 1fr;
+    grid-template-areas: 
+    'banner'
+    'about'
+    'lesson'
+    'featured';
+    border: .1rem solid purple;
+}
+main .banner {
+    border: .1rem solid red;
+    display: flex;
+    align-items: center;
+}
+
+main .banner .banner-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+main .banner .banner-left span{
+    font-size: 1rem;
+}
+main .banner .banner-left span span{
+    color: #8160c0;
+    font-size: 2rem;
+}
+main .banner .banner-left span:nth-child(3){
+    font-size: 1.5rem;
+    text-align: center;
+}
+main .banner .banner-middle{
+    height: 20rem;  
+    width: 35rem;
+    background-size: cover;
+    background: url(Nerd2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .banner .banner-right{
+    height: 15rem;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+main .about {
+    border: .1rem solid green;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10rem;
+}
+main .about .tittle{
+    font-size: 3rem;
+}
+main .lesson {
+    border: .1rem solid orange;
+}
+main .featured{
+    border: .1rem solid tomato;
+}
+
+

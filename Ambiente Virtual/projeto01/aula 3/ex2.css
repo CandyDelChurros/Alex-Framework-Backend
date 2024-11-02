@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .1rem solid black;
+    height: 100vh;
+}
+
+.yourface {
+    border: .2rem solid black;
+    width: 50rem;
+    height: 25rem;
+
+}
+
+.yourfacedown{
+    border: .2rem solid black;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yourfacedown button{
+    border: .1rem solid black;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    background-color: red;
+}
